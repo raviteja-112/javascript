@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #2193b0;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.quote-box {
+    background-color: #f9f9f9;
+    border-left: 8px solid #6dd5ed;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-content {
+    font-size: 1.6em;
+    font-style: italic;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    color: #555;
+}
+
+.quote-author {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #777;
+    align-self: flex-end;
+    margin: 0;
+}
+
+#new-quote-btn {
+    background-color: #2193b0;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#new-quote-btn:hover {
+    background-color: #1a7a90;
+    transform: translateY(-2px);
+}
+
+#new-quote-btn:active {
+    background-color: #156070;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .quote-content {
+        font-size: 1.3em;
+    }
+
+    .quote-author {
+        font-size: 1em;
+    }
+
+    #new-quote-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .quote-content {
+        font-size: 1.1em;
+    }
+
+    .quote-author {
+        font-size: 0.9em;
+    }
+
+    #new-quote-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
